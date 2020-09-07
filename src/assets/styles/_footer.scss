@@ -1,0 +1,50 @@
+footer.footer {
+  color: #fff;
+  font-size: 1.4rem;
+  background-color: #7d7d7d;
+  li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  a {
+    color: #fff;
+  }
+}
+
+.footer-attachment {
+  color: $secondary;
+  background: #f2f2f2;
+
+  .social-icons {
+    min-height: 240px;
+    background: center/cover url('/images/footerBackground.svg');
+  }
+
+  dl a {
+    color: $secondary;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  dt {
+    @extend .pb-3;
+
+    &:not(:last-of-type) {
+      @extend .pr-5;
+    }
+  }
+
+  dd {
+    @extend .py-2;
+  }
+
+  .columns {
+    @extend .pb-5;
+
+    dl {
+      @extend .pr-5;
+    }
+  }
+}

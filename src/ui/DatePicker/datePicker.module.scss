@@ -1,0 +1,93 @@
+.row {
+  margin-bottom: 3rem;
+  @include xs {
+    margin-bottom: 1.5rem;
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.picker {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  z-index: 5;
+  max-width: 50rem;
+  padding: 4rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #fff;
+  background-color: #000;
+
+  svg:hover {
+    cursor: pointer;
+    > path {
+      fill: $primary;
+    }
+  }
+}
+
+.title {
+  font-size: 2.7rem;
+  @include xs {
+    font-size: 1.8rem;
+  }
+}
+.close {
+  @include xs {
+    width: 2rem;
+  }
+}
+.monthlabel {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  text-align: center;
+}
+.weekdaylabel {
+  width: calc(100% / 7);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-family: $futuraBold;
+  text-align: center;
+}
+.day {
+  width: calc((100% / 7) - 3px);
+  min-height: 5rem;
+  margin: 1.5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: 0.2s;
+  @include xs {
+    min-height: 4rem;
+  }
+  &.range {
+    background-color: rgba(255, 102, 0, 0.7);
+  }
+  &.disabled {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+    cursor: not-allowed;
+    &:hover {
+      background-color: inherit;
+    }
+  }
+  &.dayselected,
+  &:hover {
+    background-color: #ff6600;
+  }
+}
+.dayBlank {
+  @extend .day;
+  background-color: transparent;
+  &:hover {
+    background-color: transparent;
+  }
+}

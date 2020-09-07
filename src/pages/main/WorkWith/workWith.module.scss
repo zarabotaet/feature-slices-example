@@ -1,0 +1,15 @@
+.workWithTitle {
+  margin-bottom: 1rem;
+}
+.brands {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  @include scrollbar;
+}
+.brendGray {
+  background-color: rgba(205, 205, 205, 0.1);
+}
+.brend {
+  scroll-snap-align: start;
+}

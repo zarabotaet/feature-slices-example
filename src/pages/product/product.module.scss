@@ -1,0 +1,210 @@
+.container {
+  width: calc(100% - 27rem);
+  max-width: 140rem;
+  margin: 4rem auto;
+  padding: 0 15px;
+  @media (max-width: 991px) {
+    width: 100%;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.tabButton {
+  margin-right: 0.8rem;
+}
+
+.gallery {
+  margin-bottom: 1rem;
+  overflow: hidden;
+  .product {
+    max-width: 20rem;
+    padding: 0 1rem;
+  }
+}
+.galleryMain {
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 58rem;
+    object-fit: contain;
+  }
+}
+
+.productAdditional {
+  .breadcrumbs a {
+    text-decoration: none;
+  }
+}
+
+.arrow {
+  margin: 0 0.8rem;
+}
+
+.desc {
+  margin-top: 1rem;
+  padding-left: 2rem;
+  list-style: disc;
+}
+
+.buttonPanel {
+  margin-top: 4rem;
+}
+.counterWrap {
+  padding: 0.5rem 1rem;
+  background: #f9f9f9;
+}
+
+.tableAndInfo {
+  margin-top: 4rem;
+}
+.pricing {
+  border-spacing: 0;
+  tr {
+    height: 3rem;
+  }
+  tr:nth-of-type(odd) {
+    background-color: rgba(230, 230, 230, 0.5);
+  }
+  td,
+  th {
+    padding: 0.5rem 1rem;
+  }
+  th {
+    color: #6f6f6f;
+  }
+}
+
+.mainInfoBlock {
+  margin-left: 1.5rem;
+}
+.size {
+  padding: 1.5rem 2rem;
+  background-color: rgba(230, 230, 230, 0.5);
+  &Item {
+    margin-left: 1.5rem;
+  }
+  &Txt {
+    margin-top: 0.5rem;
+  }
+}
+.guid {
+  margin-top: 1rem;
+  padding: 1.5rem 2rem;
+  background-color: rgba(230, 230, 230, 0.5);
+  &Item {
+    margin-left: 1.5rem;
+  }
+  &Link {
+    margin-top: 1rem;
+  }
+  & > svg {
+    flex: 0 0 20px;
+  }
+  &Line {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.guidMobile {
+  @extend .guid;
+  & > svg {
+    flex: 0 0 40px;
+  }
+}
+
+.variation {
+  width: 20rem;
+  height: 6rem;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  background-color: rgba(205, 205, 205, 0.2);
+  &Title {
+    margin-right: 1rem;
+  }
+  &Wrap {
+    margin: 0rem -0.5rem;
+  }
+  &Row {
+    margin-top: 2rem;
+  }
+  img {
+    height: 100%;
+    margin-right: 1rem;
+  }
+}
+.anchor {
+  margin: 0 1rem;
+  &Row {
+    margin: 0 -1rem;
+    color: $primary;
+  }
+  &Wrap {
+    margin-top: 4rem;
+  }
+}
+
+.about {
+  margin: 3rem 0;
+}
+.textCol {
+  width: calc(50% - 5rem);
+}
+/*comment*/
+.comment {
+  margin-bottom: 2rem;
+  &Title {
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.5rem;
+    background: #f9f9f9;
+  }
+  &Stars {
+    margin: 0 1rem;
+  }
+  &Info {
+    margin-bottom: 0.5rem;
+  }
+  &Date {
+    opacity: 0.5;
+  }
+}
+.faq {
+  margin: 1rem 0;
+  padding: 0 2rem;
+  &.active {
+    padding: 1rem 2rem 2rem;
+    background-color: #f9f9f9;
+  }
+
+  &Qestion {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    &:not(.active):before {
+      display: block;
+      flex-shrink: 0;
+      width: 5px;
+      height: 5px;
+      margin-right: 0.5rem;
+      margin-left: -0.5rem;
+      background-color: #000;
+      border-radius: 100%;
+      content: '';
+    }
+    svg {
+      margin-left: 0.5rem;
+    }
+    &.active {
+      margin-bottom: 1rem;
+    }
+  }
+  &Button {
+    display: inline-block;
+    margin-top: 2rem;
+  }
+}
+.discountBadge {
+  max-width: 37rem;
+}

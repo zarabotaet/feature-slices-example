@@ -1,0 +1,16 @@
+.colorPanel {
+  display: flex;
+  align-items: center;
+}
+.colorPicker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 40rem;
+  margin-right: 10px;
+  border: 1px solid #b5b5b5;
+  & > * {
+    margin: 1px;
+  }
+}

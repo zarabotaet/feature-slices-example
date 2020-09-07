@@ -1,0 +1,14 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  & > * {
+    flex-shrink: 0;
+  }
+}
+.main {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex-grow: 1;
+}

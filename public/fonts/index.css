@@ -1,0 +1,54 @@
+/* @font-face {
+  font-family: 'Futura Bold';
+  src: url('./Futura-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Futura Book';
+  src: url('./Futura-Book.woff') format('woff');
+} */
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3865328, 2020-02-10T09:26:56-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: FuturaBT-Book by Bitstream
+ * URL: https://www.myfonts.com/fonts/bitstream/futura/pro-book-193053/
+ * 
+ * Webfont: FuturaBT-Bold by Bitstream
+ * URL: https://www.myfonts.com/fonts/bitstream/futura/pro-bold-193053/
+ * 
+ * 
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright &#x00A9; 2017 Monotype Imaging Inc. All rights reserved.
+ * 
+ * © 2020 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url('//hello.myfonts.net/count/3afaf0');
+
+@font-face {
+  font-family: 'FuturaBT-Book';
+  src: url('webfonts/3AFAF0_0_0.eot');
+  src: local('FuturaBT-Book'),
+    url('webfonts/3AFAF0_0_0.eot?#iefix') format('embedded-opentype'),
+    url('webfonts/3AFAF0_0_0.woff2') format('woff2'),
+    url('webfonts/3AFAF0_0_0.woff') format('woff'),
+    url('webfonts/3AFAF0_0_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'FuturaBT-Bold';
+  src: url('webfonts/3AFAF0_1_0.eot');
+  src: local('FuturaBT-Bold'),
+    url('webfonts/3AFAF0_1_0.eot?#iefix') format('embedded-opentype'),
+    url('webfonts/3AFAF0_1_0.woff2') format('woff2'),
+    url('webfonts/3AFAF0_1_0.woff') format('woff'),
+    url('webfonts/3AFAF0_1_0.ttf') format('truetype');
+}

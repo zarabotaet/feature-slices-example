@@ -1,0 +1,35 @@
+.packageMain {
+  margin-top: 4rem;
+}
+.title {
+  padding: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &:nth-of-type(n) {
+    background-image: url('../../../assets/images/picture/PackagesBackgroundV1.svg');
+  }
+  &:nth-of-type(n + 1) {
+    background-image: url('../../../assets/images/picture/PackagesBackgroundV2.svg');
+  }
+  &:nth-of-type(n + 2) {
+    background-image: url('../../../assets/images/picture/PackagesBackgroundV3.svg');
+  }
+}
+.packageTitle {
+  margin-bottom: 1rem;
+}
+.img {
+  width: 100%;
+  height: 22rem;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s;
+}
+.newArrivals {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  padding: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.85);
+}

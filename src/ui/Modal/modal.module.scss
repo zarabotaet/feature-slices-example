@@ -1,0 +1,59 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.container {
+  position: absolute;
+  top: 10%;
+  bottom: auto;
+  left: 50%;
+  width: 100%;
+  max-width: 60rem;
+  max-height: 80%;
+  padding: 3rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #fff;
+  transform: translateX(-50%);
+  cursor: default;
+  @include scrollbar;
+
+  @include sm {
+    top: 1rem;
+    width: 90% !important;
+    max-height: calc(100% - 2rem);
+    padding: 1rem;
+  }
+}
+.header {
+  position: sticky;
+  top: -3rem;
+  margin: -3rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem 2rem;
+  background-color: $primary;
+  @include sm {
+    top: -1rem;
+    margin: -1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+}
+.close {
+  cursor: pointer;
+  &absolute {
+    position: absolute;
+    top: 2rem;
+    right: 2.5rem;
+  }
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}

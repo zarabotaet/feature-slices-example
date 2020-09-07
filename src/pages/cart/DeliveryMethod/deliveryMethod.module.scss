@@ -1,0 +1,92 @@
+.container {
+  margin-top: 3rem;
+}
+.radioGroup {
+  display: flex;
+  align-items: stretch;
+  padding: 5rem 0;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  @include md {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.box {
+  position: relative;
+  max-width: 28rem;
+  padding: 2rem;
+  border: 1px solid #dedede;
+  cursor: pointer;
+  transition: 0.2s;
+  &:not(:last-child) {
+    margin-right: 3rem;
+    @include md {
+      margin-right: 0rem;
+      margin-bottom: 3rem;
+    }
+  }
+  &:hover,
+  &Active {
+    border-color: $primary;
+  }
+}
+.freeLabel {
+  display: inline-block;
+  width: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background-color: $primary;
+}
+.chooseLabel {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.warehouses {
+  &Container {
+    display: flex;
+    @include md {
+      display: block;
+    }
+  }
+  &Map {
+    position: relative;
+    order: -1;
+    width: 76rem;
+    margin-top: -3rem;
+    margin-right: 3rem;
+    margin-bottom: -3rem;
+    margin-left: -3rem;
+    @include md {
+      display: block;
+      order: 0;
+      width: auto;
+      margin: 1rem -3rem -3rem;
+      padding-bottom: 100%;
+    }
+    @include sm {
+      margin: 1rem -1rem -1rem;
+    }
+    > * {
+      position: absolute !important;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+  &List {
+    width: 44rem;
+    @include md {
+      width: auto;
+    }
+  }
+}
+
+.warehouse {
+  margin: 1rem 0;
+  padding: 0 0 1rem;
+  &:not(:last-child) {
+    border-bottom: 1px solid #dedede;
+  }
+}

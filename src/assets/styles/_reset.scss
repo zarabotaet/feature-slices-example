@@ -1,0 +1,127 @@
+// @import '~bootstrap/scss/reboot';
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  // box-sizing: inherit; // bootstrap grid related
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline-width: thin;
+  outline-style: solid;
+  outline-color: #14a38e;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul:not([class]),
+ol:not([class]) {
+  margin: initial;
+  padding: initial;
+  list-style: initial;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  color: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  &:disabled {
+    opacity: 1;
+  }
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+button:not([class]) {
+  margin: initial;
+  padding: initial;
+  background-color: initial;
+  border: initial;
+}
+input {
+  background-color: transparent;
+  border: none;
+}
+input:not([class]) {
+  background-color: initial;
+  border: initial;
+}
+a {
+  // this rule duplicates bootstap's reset styles: see $link-decoration
+  text-decoration: none;
+}
+//a:not([class]) { // this rule is really weird and breaking styles of the links
+//  text-decoration: underline;
+//}
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+th {
+  font-weight: inherit;
+  text-align: inherit;
+}
+th:not([class]) {
+  font-weight: initial;
+  text-align: initial;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

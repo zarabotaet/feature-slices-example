@@ -1,0 +1,52 @@
+.chekout {
+  margin-top: 3.7rem;
+}
+
+.editional {
+  margin-top: 1rem;
+}
+.buttons {
+  padding: 2rem 0;
+}
+.prices {
+  width: 26rem;
+  @include md {
+    margin: 0 auto;
+  }
+}
+.priceCard {
+  padding: 1rem 2rem;
+  background-color: $cardBg;
+}
+.price {
+  margin-bottom: 5px;
+  user-select: none;
+}
+.priceTitle {
+  color: #9b9b9b;
+}
+
+.description {
+  max-width: 20rem;
+  color: #9b9b9b;
+  font-size: 1.4rem;
+}
+
+.emptyBage {
+  margin: 5rem 0 2rem;
+  padding: 3rem;
+  background-color: rgba(205, 205, 205, 0.2);
+}
+
+.yourDiscount {
+  max-width: 27rem;
+  padding: 3rem;
+  background: #fff7f2;
+  @include md {
+    margin: 0 auto 2rem;
+  }
+}
+
+.title {
+  margin-bottom: 2.5rem;
+}

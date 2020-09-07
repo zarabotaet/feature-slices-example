@@ -1,0 +1,50 @@
+.cardRows {
+  margin: 0 -1rem;
+}
+.header {
+  margin-bottom: 2rem;
+}
+.description {
+  width: 55%;
+  svg {
+    flex-shrink: 0;
+    margin-right: 1rem;
+  }
+}
+.card {
+  position: relative;
+  width: calc(25% - 2rem);
+  margin: 0 1rem 2rem;
+  @include md {
+    width: calc(50% - 2rem);
+  }
+  @include sm {
+    width: 100%;
+  }
+  &Body {
+    height: 13rem;
+    background-color: #cdcdcd;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+  }
+  &Header {
+    align-self: flex-end;
+    text-align: right;
+  }
+  &Footer {
+    display: inline-block;
+    padding: 0.7rem 1.1rem;
+    background-color: rgba(24, 17, 13, 0.8);
+    transition: 0.2s;
+  }
+}
+.badge {
+  margin-top: 0.5rem;
+  padding: 0.7rem;
+  background-color: $primary;
+  svg {
+    margin-right: 1rem;
+  }
+}

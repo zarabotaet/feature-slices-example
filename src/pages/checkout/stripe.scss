@@ -1,0 +1,19 @@
+.stripe-input-base {
+  display: block;
+  width: 100%;
+  min-height: 41px;
+  padding: 0 15px;
+  color: #757575;
+  font-size: 14px;
+  line-height: 1;
+  background-color: #fff;
+}
+
+.stripe-input-focus {
+  border-color: #40a9ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.stripe-input-invalid {
+  box-shadow: 0 0 0 2px #ff482f;
+}

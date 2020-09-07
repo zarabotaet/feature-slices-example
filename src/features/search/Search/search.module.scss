@@ -1,0 +1,38 @@
+.search {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: nowrap;
+  max-width: 40rem;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 4rem;
+  @include xs {
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  input {
+    height: 4rem;
+    margin-left: 0.7rem;
+    color: #757575;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: transparent;
+  }
+}
+.searchBtn {
+  align-self: stretch;
+  margin-right: 0.7rem;
+  cursor: pointer;
+  svg {
+    margin-left: 1.5rem;
+  }
+}
+.searchText {
+  color: #fd5c01;
+  font-size: 1.6rem;
+  @include lg {
+    display: none;
+  }
+}

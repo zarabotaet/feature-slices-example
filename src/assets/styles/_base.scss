@@ -1,0 +1,49 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  min-width: 320px !important;
+  overflow-x: hidden;
+  font-size: 1.5rem;
+  font-family: $futuraBook;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  text-decoration-skip: objects;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+
+  &.disable-scrolling {
+    overflow: hidden !important;
+
+    &:before {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 3;
+      background-color: rgba(#000, 0.5);
+      content: '';
+    }
+  }
+}
+
+::selection {
+  color: white;
+  background-color: rgba(255, 102, 0, 1);
+}
+
+//Solving the problem of Slick Slider. This property must be used for the same height of images on the product page.
+// It works if installed globally
+.slick-track {
+  display: flex;
+}

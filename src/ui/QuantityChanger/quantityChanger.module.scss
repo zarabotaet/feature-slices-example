@@ -1,0 +1,32 @@
+.wrap {
+  &.small {
+    input {
+      width: 1.8rem;
+      height: 1.8rem;
+      margin: 0.2rem;
+      font-size: 1.4rem;
+      text-align: center;
+      border: none !important;
+      -moz-appearance: textfield;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        margin: 0;
+        -webkit-appearance: none;
+      }
+    }
+  }
+  input {
+    width: 3.8rem;
+    height: 3.8rem;
+    margin: 0.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+    border: 1px solid #b5b5b5 !important;
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      margin: 0;
+      -webkit-appearance: none;
+    }
+  }
+}

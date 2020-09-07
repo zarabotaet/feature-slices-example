@@ -1,0 +1,42 @@
+.language {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.country {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: #fff;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.open {
+  display: flex;
+}
+.borders {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 26px;
+  svg {
+    filter: grayscale(1);
+  }
+  //&:hover {
+  //  background-color: #f2f2f2;
+  //}
+}

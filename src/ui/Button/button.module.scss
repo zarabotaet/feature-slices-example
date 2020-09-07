@@ -1,0 +1,145 @@
+.button {
+  display: flex;
+  align-items: stretch;
+  padding: 0 2.5rem;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: $primary;
+  border: 1px solid $primary;
+  cursor: pointer;
+  transition: 0.3s;
+  @include xs {
+    padding: 0 2rem;
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #de5900;
+  }
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+    opacity: 0.3;
+  }
+  &[aria-selected='true'] {
+    color: $primary;
+    background-color: #fff;
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+  &small {
+    font-size: 1.5rem;
+    .buttonContentStretch {
+      padding: 0.7rem 0;
+      @include xs {
+        padding: 0.5rem 0;
+      }
+    }
+    @include xs {
+      font-size: 1.2rem;
+    }
+  }
+  &inline {
+    display: inline-flex;
+  }
+  &ContentStretch {
+    flex-grow: 1;
+    padding: 1.2rem 0;
+    @include xs {
+      padding: 1rem 0;
+    }
+  }
+  &prefix,
+  &postfix {
+    padding-right: 0;
+    padding-left: 0;
+    .buttonContentStretch {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+      @include xs {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+      }
+    }
+  }
+  &inverse {
+    color: $primary;
+    background-color: #fff;
+    &:hover {
+      color: $primary;
+      background-color: $cardBg;
+    }
+    &[aria-selected='true'] {
+      color: #fff;
+      background-color: $primary;
+      border: 1px solid $primary;
+    }
+    .prefix,
+    .postfix {
+      color: #fff;
+      background-color: $primary;
+    }
+  }
+  &dark {
+    background-color: #333;
+    border: 1px solid #333;
+    cursor: not-allowed;
+  }
+  &transparent {
+    color: #fff;
+    background-color: transparent;
+    border-color: #fff;
+
+    &:hover {
+      color: $primary;
+      background-color: transparent;
+      border-color: $primary;
+    }
+    &.buttoninverse {
+      color: $primary;
+      border: 1px solid $primary;
+      &:hover {
+        color: #fff;
+        background-color: $primary;
+      }
+    }
+    .prefix,
+    .postfix {
+      color: #fff;
+      background-color: $cardBg;
+    }
+  }
+  &Loading {
+    cursor: not-allowed;
+    user-select: none;
+  }
+}
+.postfixIcon,
+.prefixIcon {
+  height: 3rem;
+  svg {
+    height: 100%;
+  }
+}
+.prefixIcon {
+  margin-right: 1rem;
+}
+.postfixIcon {
+  margin-left: 1rem;
+}
+.prefix,
+.postfix {
+  padding: 0 1rem;
+  color: $primary;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: $cardBg;
+  @include xs {
+    padding: 0 0.5rem;
+    font-size: 1.3rem;
+  }
+}

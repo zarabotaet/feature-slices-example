@@ -1,0 +1,78 @@
+.beforeFooter {
+  margin: 6rem 0;
+}
+.calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 81px;
+  height: 81px;
+  margin: 0;
+  margin-right: 17px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+}
+.text {
+  color: #000000;
+
+  font-size: 2.7rem;
+  font-family: $futuraBold;
+  font-style: normal;
+  line-height: 150%;
+  border-bottom: 3px solid transparent;
+
+  @include sm {
+    font-size: 2rem;
+  }
+}
+.link {
+  color: $secondary;
+
+  font-size: 2.7rem;
+  font-family: $futuraBold;
+  font-style: normal;
+  line-height: 150%;
+  text-decoration: none;
+  border-bottom: 3px solid #ff6600;
+  //cursor: pointer;
+
+  @include sm {
+    font-size: 2rem;
+  }
+
+  &:hover {
+    color: $primary;
+  }
+}
+.goToCalculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 233px;
+  height: 59px;
+  margin-left: 10px;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 148.96%;
+  background-color: #ff6600;
+  border: none;
+  cursor: pointer;
+}
+.goUp {
+  display: flex;
+  margin-left: 4rem;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.liveChat {
+  width: 61px;
+  height: 61px;
+  padding: 0;
+  background-color: #333333;
+  border: none;
+  border-radius: 50%;
+}

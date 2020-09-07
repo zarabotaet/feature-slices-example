@@ -1,0 +1,60 @@
+%book {
+  font-weight: 400;
+  font-family: $futuraBook;
+  line-height: 1.5;
+}
+%bold {
+  font-weight: 400;
+  font-family: $futuraBold;
+  line-height: 1.5;
+}
+.T8yColor-primary {
+  color: $primary;
+}
+.T8yColor-secondary {
+  color: $secondary;
+}
+.T8yColor-danger {
+  color: $danger;
+}
+.T8yColor-light {
+  color: #fff;
+}
+.T8yColor-lightGray {
+  color: #b3b7bb;
+}
+.T8y-h1 {
+  font-size: 2.7rem;
+  @extend %bold;
+}
+.T8y-h2 {
+  font-size: 2rem;
+  @extend %bold;
+}
+.T8y-t1 {
+  font-size: 1.8rem;
+  @extend %book;
+}
+.T8y-t2 {
+  font-size: 1.5rem;
+  @extend %book;
+}
+.T8y-t3 {
+  font-size: 1.3rem;
+  @extend %book;
+}
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.bold {
+  font-weight: normal;
+  font-family: $futuraBold;
+}
+.regular {
+  font-weight: normal;
+  font-family: $futuraBook;
+}

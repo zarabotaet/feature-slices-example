@@ -1,0 +1,119 @@
+image: alpine:latest
+
+definitions:
+  caches:
+    cypress: ~/.cache/Cypress
+
+build: &build
+  image: node:lts
+  caches:
+    - node
+    - cypress
+  artifacts:
+    - build/**
+    - .env
+    - .server
+  environment:
+    NODE_ENV: production
+  script:
+    - apt-get update && apt-get install -y rsync gettext-base
+    - echo "SERVER=$SERVER" > .server
+    - envsubst < .env.production > .env
+    - rm -f .env.production .env.development
+    - cat .env
+    - yarn install --frozen-lockfile
+    - yarn lint
+    - yarn build
+    - yarn test --passWithNoTests
+
+e2e: &e2e
+  image: cypress/base:10
+  caches:
+    - node
+    - cypress
+  environment:
+    NODE_ENV: test
+  script:
+    - yarn install --frozen-lockfile
+    - yarn e2e:ci
+#  artifacts:
+#    - cypress/screenshots/**
+#    - cypress/videos/**
+
+deploy: &deploy
+  script:
+    - apk add --no-cache openssh rsync
+    - source .server
+    - rsync -rpz --delete-after --force build/ cicd@$SERVER:/var/www/public/
+    - rsync -pz --rsync-path="sudo rsync" conf.d/nginx/default.vhost cicd@$SERVER:/etc/nginx/sites-available/default
+    - ssh -A -tt -o 'StrictHostKeyChecking=no' cicd@$SERVER "sudo ln -sfn /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default"
+    - ssh -A -tt -o 'StrictHostKeyChecking=no' cicd@$SERVER "sudo -n systemctl restart nginx"
+
+pipelines:
+  pull-requests:
+    feature/*:
+      - step:
+          <<: *build
+          name: Test dev build
+          deployment: dev
+      - step:
+          name: E2E tests
+          <<: *e2e
+    hotfix/*:
+      - step:
+          <<: *build
+          name: Test stage build
+          deployment: stage
+      - step:
+          name: E2E tests
+          <<: *e2e
+
+  branches:
+    develop:
+      - step:
+          <<: *build
+          name: Build dev
+          deployment: dev
+      - step:
+          name: E2E tests
+          <<: *e2e
+      - step:
+          name: Deploy to dev
+          <<: *deploy
+    master:
+      - step:
+          <<: *build
+          name: Build stage
+          deployment: stage
+      - step:
+          name: E2E tests
+          <<: *e2e
+      - step:
+          name: Deploy to stage
+          <<: *deploy
+
+  tags:
+    '*.*.*':
+      - step:
+          <<: *build
+          name: Build prod
+          deployment: prod
+      - step:
+          name: E2E tests
+          <<: *e2e
+      - step:
+          name: Deploy prod to WORKER1
+          script:
+            - apk add --no-cache openssh rsync
+            - rsync -rpz --delete-after --force build/ cicd@$WORKER1:/var/www/public/
+            - rsync -pz --rsync-path="sudo rsync" conf.d/nginx/default.vhost cicd@$WORKER1:/etc/nginx/sites-available/default
+            - ssh -A -tt -o 'StrictHostKeyChecking=no' cicd@$WORKER1 "sudo ln -sfn /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default"
+            - ssh -A -tt -o 'StrictHostKeyChecking=no' cicd@$WORKER1 "sudo -n systemctl restart nginx"
+      - step:
+          name: Deploy prod to WORKER2
+          script:
+            - apk add --no-cache openssh rsync
+            - rsync -rpz --delete-after --force build/ cicd@$WORKER2:/var/www/public/
+            - rsync -pz --rsync-path="sudo rsync" conf.d/nginx/default.vhost cicd@$WORKER2:/etc/nginx/sites-available/default
+            - ssh -A -tt -o 'StrictHostKeyChecking=no' cicd@$WORKER2 "sudo ln -sfn /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default"
+            - ssh -A -tt -o 'StrictHostKeyChecking=no' cicd@$WORKER2 "sudo -n systemctl restart nginx"

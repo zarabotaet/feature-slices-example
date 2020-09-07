@@ -1,0 +1,189 @@
+.header {
+  margin: 5rem 0 2rem;
+  &Nav > * {
+    margin-left: 3rem;
+  }
+}
+
+.chekout {
+  margin-top: 3.7rem;
+}
+.buttons {
+  width: 27rem;
+  padding: 3.5rem;
+  & > * {
+    margin: 1rem 0;
+  }
+}
+
+.slotsInput {
+  color: #757575;
+  &:not(:first-child) {
+    text-indent: 0;
+  }
+}
+.faq {
+  width: 45%;
+  ul {
+    padding-left: 0;
+  }
+}
+.faqItem {
+  margin-bottom: 1.5rem;
+  margin-left: 0;
+}
+.faqTitle {
+  margin-bottom: 1rem;
+}
+
+.price {
+  margin-bottom: 5px;
+}
+.priceTitle {
+  color: #9b9b9b;
+}
+
+.checkoutWrapper {
+  margin: 20px 0;
+  padding: 20px 15px;
+  background-color: $cardBg;
+}
+
+.field {
+  margin-bottom: 2rem;
+}
+
+.fieldsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+
+  .field {
+    flex: 0 0 auto;
+    flex-grow: 1;
+    min-width: 362px;
+    margin: 0 10px 20px 10px;
+
+    @include xs {
+      min-width: auto;
+    }
+  }
+}
+
+.bottom {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.bottomWrapper {
+  @include md {
+    justify-content: center !important;
+  }
+}
+
+.bottomInner {
+  @include md {
+    display: block;
+  }
+}
+
+.dottedArrow {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px 15px 15px 15px;
+
+  @include md {
+    display: none;
+  }
+}
+
+.paymentBlock {
+  width: 410px;
+
+  @include xs {
+    width: 100%;
+  }
+}
+
+.paymentWrapper {
+  padding: 20px 30px;
+  background-color: $cardBg;
+
+  @include xs {
+    padding: 20px 10px;
+  }
+}
+
+.paymentTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.paymentLabel {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+
+  @include xs {
+    margin-left: 10px;
+  }
+
+  span {
+    display: inline-block;
+    margin-left: 10px;
+    color: #757575;
+    font-size: 14px;
+  }
+}
+
+.paymentField {
+  min-width: 100px;
+  margin-bottom: 20px;
+}
+
+.error {
+  margin-top: 5px;
+  color: #ff482f;
+  font-size: 12px;
+}
+
+.formWrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.formHide {
+  display: none;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+
+  @include xs {
+    padding: 0 10px;
+  }
+
+  button {
+    flex-grow: 1;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+
+.paymentPolicy {
+  margin: 20px 0;
+
+  @include xs {
+    padding: 0 10px;
+  }
+}
+
+.faqButton {
+  max-width: 300px;
+  margin-top: 20px;
+}

@@ -1,0 +1,27 @@
+.aboutAddress {
+  position: absolute;
+  top: 4rem;
+  left: 35.5rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 30%;
+  padding: 3rem;
+  background-color: #ffffff;
+  @include lg {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    width: 400px;
+    transform: translateX(-50%);
+  }
+  @include xs {
+    width: 96%;
+  }
+  h1 {
+    margin-bottom: 1rem;
+  }
+  .aboutAddressItem {
+    margin-top: 0.5rem;
+  }
+}

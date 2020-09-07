@@ -1,0 +1,23 @@
+.about {
+  .aboutTopHeader {
+    background-color: #f2f2f2;
+  }
+}
+
+.aboutMapWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 61rem;
+  background: url('../../assets/images/picture/about-us-map.jpg') #d3d3d3;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% contain;
+}
+
+.fix {
+  z-index: -1;
+  width: 1px;
+  height: 1px;
+  margin-bottom: -1px;
+  opacity: 0;
+}

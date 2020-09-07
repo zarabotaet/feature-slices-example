@@ -1,0 +1,24 @@
+.aboutHistory {
+  @include sectionWrapper;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  > div {
+    width: 40%;
+  }
+  > iframe {
+    width: 60%;
+  }
+  @include lg {
+    flex-direction: column;
+    > div,
+    iframe {
+      width: 100%;
+    }
+    iframe {
+      margin-top: 3rem;
+    }
+  }
+}

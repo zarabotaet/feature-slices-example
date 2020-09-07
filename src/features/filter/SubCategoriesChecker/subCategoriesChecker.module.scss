@@ -1,0 +1,39 @@
+.grid {
+  margin: 3rem -1rem -1rem;
+}
+.cell {
+  width: 25%;
+  padding: 1rem;
+}
+.item {
+  position: relative;
+  display: block;
+  padding-top: 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  outline: none;
+  cursor: pointer;
+  &:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 0.5rem solid transparent;
+    transition: 0.2s;
+    content: '';
+  }
+  &:hover:before,
+  &.active:before {
+    border: 0.5rem solid $primary;
+  }
+}
+.txt {
+  margin-left: 0.5rem;
+}
+.label {
+  position: absolute;
+  bottom: 0;
+  padding: 0.5rem 1rem;
+  background-image: url('../../../assets/images/picture/PackagesBackgroundV1.svg');
+}

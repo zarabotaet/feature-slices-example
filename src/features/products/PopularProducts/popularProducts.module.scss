@@ -1,0 +1,32 @@
+.container {
+  margin-top: 5rem;
+}
+.sliderWrap {
+  margin: 0;
+}
+.sliderCell {
+  width: 25%;
+  padding: 1rem;
+  @include md {
+    width: 50%;
+  }
+}
+.header {
+  margin-bottom: 2rem;
+}
+.title {
+  margin-right: 2rem;
+  font-size: 2.7rem;
+}
+.tag {
+  padding: 1rem 1.5rem;
+  color: #2e2e2e;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.2s;
+  &.active,
+  &:hover {
+    background-color: #f2f2f2;
+    opacity: 1;
+  }
+}

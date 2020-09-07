@@ -1,0 +1,35 @@
+.wrap {
+  max-width: 62rem;
+  margin: 10rem auto;
+  padding-bottom: 3rem;
+  background-color: rgba(#cdcdcd, 0.1);
+}
+
+.header {
+  margin-bottom: 40px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.text {
+  max-width: 48rem;
+  margin: 0 auto;
+
+  @include xs {
+    display: block !important;
+    text-align: center;
+  }
+
+  svg {
+    margin-right: 1rem;
+
+    @include xs {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+.button {
+  margin: 2rem auto 0;
+}

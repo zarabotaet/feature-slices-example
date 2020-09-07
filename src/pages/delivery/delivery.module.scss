@@ -1,0 +1,199 @@
+.picker {
+  &Container {
+    margin-bottom: 5rem;
+  }
+  &Header {
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+    background-color: $cardBg;
+    &Loading:after {
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 5rem);
+      width: 10rem;
+      height: 0.3rem;
+      background-color: $primary;
+      animation: loading 2s ease infinite;
+      content: '';
+    }
+  }
+  &Grid {
+    display: grid;
+    grid-template-columns: 5rem 1fr 5rem;
+    column-gap: 0.5rem;
+  }
+  &Nav {
+    background-color: $cardBg;
+    cursor: pointer;
+    user-select: none;
+    &ArrNext,
+    &ArrPrev {
+      height: 5.3rem;
+      transition: 0.3s;
+      &:after {
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        content: '';
+      }
+    }
+    &ArrPrev {
+      &Disabled {
+        cursor: not-allowed;
+        opacity: 0.3;
+      }
+      &:after {
+        border-color: transparent $secondary transparent transparent;
+        border-width: 0.8rem 1.4rem 0.8rem 0;
+      }
+    }
+    &ArrNext {
+      &:after {
+        border-color: transparent transparent transparent $secondary;
+        border-width: 0.8rem 0 0.8rem 1.4rem;
+      }
+    }
+  }
+  &Timeline {
+    display: grid;
+    grid-row-gap: 3px;
+    grid-template-rows: repeat(24, 2.5rem);
+  }
+  &TimelineSlot {
+    padding: 0 0.5rem;
+    line-height: 2.5rem;
+    text-align: right;
+  }
+}
+
+.daysGrid {
+  display: grid;
+  flex-grow: 1;
+  grid-column-gap: 0.5rem;
+}
+
+.day {
+  flex-grow: 1;
+  &Grid {
+    position: relative;
+    display: grid;
+    grid-row-gap: 3px;
+    grid-template-rows: repeat(24, 2.5rem);
+  }
+  &Header {
+    height: 5rem;
+    margin-bottom: 3px;
+    text-align: center;
+    background-color: $cardBg;
+  }
+  &SelectedHeader {
+    color: #fff;
+    background-color: $primary;
+  }
+}
+
+.zebra {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: grid;
+  grid-row-gap: 3px;
+  grid-template-rows: repeat(24, 2.5rem);
+  &Item {
+    background-color: $cardBg;
+  }
+}
+.gridVsFreeSlot {
+  grid-template-rows: 15rem repeat(24, 2.5rem);
+}
+.slot {
+  position: relative;
+  cursor: pointer;
+  &Multi {
+    box-shadow: 0 0 0 0.5rem #ededed inset;
+  }
+  &:hover {
+    background: lighten($secondary, 75%);
+  }
+}
+.popover {
+  z-index: 2;
+  min-width: 17rem;
+  margin-top: -0.5rem;
+  padding: 0.5rem;
+  color: #fff;
+  text-align: center;
+  background-color: $primary;
+  border: 1px solid $secondary;
+  @include xs {
+    padding: 0.3rem;
+  }
+  &Wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3rem;
+  }
+  svg {
+    path:first-of-type {
+      display: none;
+    }
+
+    path:last-of-type {
+      fill: $primary;
+    }
+  }
+}
+.freeslot {
+  z-index: 1;
+  min-width: auto;
+  margin: 0;
+}
+.radioLabel {
+  text-transform: uppercase;
+  cursor: pointer;
+  input {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  }
+  &:focus-within {
+    outline: thin #14a38e solid;
+  }
+}
+.radioButton {
+  flex-shrink: 0;
+  width: 4rem;
+  height: 4rem;
+  border: 1.2rem solid $cardBg;
+  border-radius: 50%;
+  &Active {
+    background-color: $primary;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: translate(-15rem, 0) scale(0, 1);
+  }
+  15% {
+    transform: translate(-15rem, 0) scale(0, 1);
+  }
+
+  50% {
+    transform: translate(0rem, 0) scale(2, 1);
+  }
+  85% {
+    transform: translate(15rem, 0) scale(0, 1);
+  }
+  100% {
+    transform: translate(15rem, 0) scale(0, 1);
+  }
+}

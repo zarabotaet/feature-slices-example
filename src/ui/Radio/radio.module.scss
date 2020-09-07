@@ -1,0 +1,42 @@
+.label {
+  cursor: pointer;
+  user-select: none;
+  input {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  }
+  &:focus-within {
+    outline: thin #14a38e solid;
+  }
+}
+
+.button {
+  position: relative;
+  flex-shrink: 0;
+  border: 1px solid #b5b5b5;
+  border-radius: 50%;
+  transition: 0.2s;
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 55%;
+    height: 55%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    transition: 0.2s;
+    content: '';
+  }
+  &Active {
+    border-color: $primary;
+    &:after {
+      background-color: $primary;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+  }
+}

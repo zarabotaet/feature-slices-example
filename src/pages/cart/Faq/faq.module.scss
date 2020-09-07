@@ -1,0 +1,23 @@
+.faq {
+  padding-bottom: 2rem;
+  @include media-breakpoint-down(md) {
+    order: 1;
+  }
+  @include media-breakpoint-up(lg) {
+    //width: 45%;
+    width: calc(100% - 60rem); // 60rem is double width of cart_prices
+  }
+  ul {
+    padding-left: 1.7rem !important;
+  }
+}
+.faqButton {
+  margin-bottom: 20px;
+}
+.faqItem {
+  margin-bottom: 1.5rem;
+  margin-left: 0;
+}
+.faqTitle {
+  margin-bottom: 1rem;
+}

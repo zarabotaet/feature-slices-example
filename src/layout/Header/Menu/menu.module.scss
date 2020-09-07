@@ -1,0 +1,14 @@
+.menu {
+  padding: 2rem;
+  font-size: 1.8rem;
+  background: rgba(0, 0, 0, 0.85);
+}
+.item {
+  display: block;
+  color: #fff;
+  line-height: 2;
+
+  &:hover {
+    color: #fff;
+  }
+}

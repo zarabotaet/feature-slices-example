@@ -1,0 +1,25 @@
+.afterHeader {
+  position: relative;
+  margin-bottom: 10rem;
+  padding-top: 4rem;
+  @include sm {
+    background: linear-gradient(
+      130deg,
+      rgba(255, 255, 255, 0.8) 5%,
+      rgba(255, 255, 255, 0) 90%
+    );
+  }
+}
+.videoBg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  background-image: url('../../../assets/images/picture/afterHeader.jpg');
+  background-size: cover;
+  transform: translateX(-50%) translateY(-50%);
+}

@@ -1,0 +1,43 @@
+.section {
+  margin-top: 6rem;
+}
+
+.card {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.badge {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  color: #fff;
+  font-size: 1.9rem;
+  line-height: 1.5;
+  background-color: rgba(0, 0, 0, 0.85);
+  span {
+    margin-left: 0.5rem;
+  }
+}
+.title {
+  padding: 1rem 3rem;
+  color: #ffffff;
+
+  font-size: 2.4rem;
+  font-family: $futuraBold;
+  font-style: normal;
+  line-height: 46px;
+}
+.img {
+  padding-top: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: 0.2s;
+  &:hover {
+    background-size: 130%;
+  }
+}

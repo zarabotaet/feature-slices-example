@@ -1,0 +1,38 @@
+.checkbox {
+  flex-shrink: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-right: 0.5rem;
+  border: 1px solid #b5b5b5;
+  cursor: pointer;
+}
+[aria-checked='true'] .checkbox {
+  background-image: url('../../assets/images/icon/check.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 60%;
+}
+
+.policy {
+  display: flex;
+  flex-wrap: nowrap !important;
+  align-items: flex-start;
+
+  span {
+    display: block;
+    margin-left: 10px;
+    font-size: 14px;
+    text-align: left;
+
+    a {
+      display: inline-block;
+      color: #000;
+    }
+  }
+
+  strong {
+    display: inline-block;
+    color: #000;
+    text-decoration: underline;
+  }
+}

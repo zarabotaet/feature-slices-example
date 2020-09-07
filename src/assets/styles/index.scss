@@ -1,0 +1,10 @@
+@import 'reset';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/utilities';
+@import 'base';
+@import 'footer';
+
+@if ($env == 'development') {
+  @include cssVars;
+}

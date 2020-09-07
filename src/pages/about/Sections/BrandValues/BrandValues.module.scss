@@ -1,0 +1,42 @@
+$iconsBgColor: #f9f9f9;
+
+.aboutBrand {
+  @include sectionWrapper;
+}
+.aboutBrandValuesWrapper {
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.aboutBrandItem {
+  width: calc(25% - 1rem);
+  margin-bottom: 3rem;
+
+  @include lg {
+    width: calc(33.3% - 1rem);
+  }
+  @include md {
+    width: calc(50% - 1rem);
+  }
+  @include xs {
+    width: calc(100%);
+  }
+}
+.aboutBrandItemIcon {
+  position: relative;
+  min-width: 8rem;
+  height: 8rem;
+  margin-right: 1rem;
+  background-color: $iconsBgColor;
+  border-radius: 50%;
+}
+.aboutBrandItemIconNumber {
+  position: absolute;
+  top: -5px;
+  right: -1rem;
+  z-index: 5;
+  padding: 5px 10px;
+  color: #333333;
+  font-size: 2rem;
+  background-color: $iconsBgColor;
+  border-radius: 50%;
+}

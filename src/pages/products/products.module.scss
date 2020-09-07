@@ -1,0 +1,38 @@
+.wrapProducts {
+  @media screen and (min-width: 768px) {
+    width: calc(100% - 260px) !important;
+  }
+}
+.cardModule {
+  margin-top: 5rem;
+}
+.cardModuleTitle {
+  display: flex;
+  align-items: center;
+  &:before {
+    display: block;
+    width: 5rem;
+    height: 2px;
+    margin-right: 1rem;
+    background-color: currentColor;
+    content: '';
+  }
+}
+.cardModuleMore {
+  margin-bottom: -0.5rem;
+  margin-left: 1rem;
+  color: #757575;
+}
+
+.slider {
+  margin-bottom: 8rem;
+}
+.seoText {
+  order: 1;
+  margin-bottom: 4rem;
+}
+.emptyBadge {
+  margin: 5rem 0 2rem;
+  padding: 3rem;
+  background-color: rgba(205, 205, 205, 0.2);
+}
